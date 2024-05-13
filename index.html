@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>３×３ Fighters</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./css/reset.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/sanitize.css" /> -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>３×３ Fighters</h1>
+            <h2>ファイターのカードを選んでください</h2>
+        </header>
+
+        <div class="main-content">
+            <div class="selection-area">
+                <div class="fighterList-area">
+                    <ul id="fighterList">
+                        <li class="selected">プロレスラー</li>
+                        <li>柔道家</li>
+                        <li>ボクサー</li>
+                        <li>総合格闘家</li>
+                        <li>空手家</li>
+                        <li>フードファイター</li>
+                    </ul>
+                </div>
+
+                <div class="card-area">
+                    <div class="fighterImage-area">
+                        <div id="fighterImage"></div>
+                        <div id="fighterParams" class="fighter-params">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>OFFENCE</th>
+                                        <th>DEFENSE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>パンチ</th>
+                                        <td><span id="fighterPunch"></span></td>
+                                        <td><span id="fighterPunchDef"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>キック</th>
+                                        <td><span id="fighterKick"></span></td>
+                                        <td><span id="fighterKickDef"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>投げ</th>
+                                        <td><span id="fighterThrow"></span></td>
+                                        <td><span id="fighterDefense"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>胃袋</th>
+                                        <td><span id="fighterStomach"></span></td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <button id="confirmSelection">このカードを選ぶ</button>
+                </div>
+            </div>
+
+            <div class="table-area">
+                <div id="yourTable" class="table">
+                    <h2>PLAYER</h2>
+                </div>
+                <button id="startBattle" style="display: none;">バトル開始！</button>
+                <div id="computerTable" class="table">
+                    <h2>COMPUTER</h2>
+                </div>
+            </div>
+
+            <!-- バトル用のボタンを追加 -->
+            <div id="battleActions" style="display: none;">
+                <button id="attackPunch">パンチ</button>
+                <button id="attackKick">キック</button>
+                <button id="attackThrow">投げる</button>
+                <button id="attackEat" style="display: none;">大食い</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

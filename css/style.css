@@ -1,0 +1,269 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/background-image.png');
+    background-size: 1800px 1100px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* コンテナー内のアイテムが折り返される */
+    width: 100%;
+    justify-content: space-around;
+}
+
+.selection-area {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.fighterList-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+}
+
+#fighterList,
+#fighterParams,
+#fighterImage {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    /* 全幅 */
+}
+
+.yourTable,
+.computerTable {
+    background: #ccc;
+    border-radius: 8px;
+    width: 90%;
+}
+
+#fighterList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#fighterList li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+#fighterList li.selected,
+#fighterList li:hover {
+    background-color: #4169E1;
+}
+
+#fighterImage {
+    width: 70%;
+    height: 370px;
+    background-size: cover;
+    background-position: center;
+    align-self: center;
+}
+
+.card-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: auto;
+}
+
+.fighterImage-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.table-area {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin: 10px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    /* カードを縦方向に並べる */
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 250px;
+    width: 90%;
+    border: 1px solid #ccc;
+    
+    box-sizing: border-box;
+    background: rgba(0, 200, 0);
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.fighterCard {
+    width: 90%;
+    max-width: 130px;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    margin: 5px;
+    border: 2px solid #000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button,
+#confirmSelection,
+#startBattle {
+    padding: 10px 20px;
+    background-color: #a9ceec;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.fighter-params {
+    display: flex;
+    justify-content: center;
+}
+
+
+th,
+td {
+    border: 1px solid white;
+    padding: 8px;
+}
+
+.button:hover,
+#confirmSelection:hover,
+#startBattle:hover {
+    background-color: #228B22;
+}
+
+.active-fighter {
+    border: 6px solid yellow;
+}
+
+#battleActions button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #32CD32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#battleActions button:hover {
+    background-color: #228B22;
+}
+
+/* 勝者のカード枠を白くする */
+.fighterCard.winner {
+    border: 5px solid white;
+    box-shadow: 0 0 10px 5px white;
+}
+
+/* 敗者のカード枠を黒くする */
+.fighterCard.loser {
+    border: 5px solid black;
+    box-shadow: 0 0 10px 5px black;
+}
+
+#attackPunch {
+    background-color: royalblue;
+    color: white;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px royalblue;
+}
+
+#attackKick {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px gold;
+}
+
+#attackThrow {
+    background-color: forestgreen;
+    color: white;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px forestgreen;
+}
+
+#attackEat {
+    background-color: firebrick;
+    color: white;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px firebrick;
+}
+
+
+@media (max-width: 800px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .selection-area,
+    .table-area {
+        width: 100%;
+    }
+
+    .table,
+    #fighterImage,
+    #fighterParams {
+        width: 90%;
+    }
+}
